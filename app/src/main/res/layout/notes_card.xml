@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="24dp"
+    android:backgroundTint="@color/teal_200"
+    app:cardCornerRadius="21dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvJudulCardViewNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:text="Judul"
+            android:textSize="21sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAyaya"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            app:cardCornerRadius="32dp"
+            android:layout_below="@+id/tvJudulCardViewNote">
+
+            <ImageView
+                android:id="@+id/ivNoteCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="#4E4E4E"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/tvKontenNoteCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Ini adalah konten dari note yang anda buat ayayayayaya."
+            android:layout_below="@id/tvJudulCardViewNote"
+            android:layout_toEndOf="@id/cardAyaya"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageButton
+            android:id="@+id/btnEditNoteCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/ic_baseline_edit_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageButton
+            android:id="@+id/btnDeleteNoteCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_baseline_delete_24"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/btnEditNoteCard"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
